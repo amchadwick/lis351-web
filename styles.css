@@ -1,0 +1,504 @@
+/* =====================================
+   Anne Chadwick - Personal Portfolio
+   LIS 351 A4: CSS Styling
+   ===================================== */
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+}
+
+/* Header and navigation */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5eaf0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 0;
+}
+
+.brand {
+  font-size: 25px;
+  font-weight: 700;
+  color: #17324d;
+  white-space: nowrap;
+}
+
+.brand .dot {
+  color: #5fa8d3;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.site-nav a {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.site-nav a:hover {
+  color: #3a88a8;
+  text-decoration: none;
+}
+
+/* Introduction hero */
+.hero {
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.62),
+      rgba(238, 246, 250, 0.78)
+    ),
+    url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #285f7b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.hero h1 {
+  margin: 0;
+  color: #17324d;
+  font-size: clamp(36px, 6vw, 54px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hero-subhead {
+  max-width: 650px;
+  margin: 14px auto 26px;
+  color: #333333;
+  font-size: 20px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 11px 21px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s ease,
+              color 0.2s ease,
+              border-color 0.2s ease;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn-dark {
+  background: #17324d;
+  border-color: #17324d;
+  color: #ffffff;
+}
+
+.btn-dark:hover {
+  background: #28516f;
+  border-color: #28516f;
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: #3a88a8;
+  color: #285f7b;
+}
+
+.btn-outline:hover {
+  background: #3a88a8;
+  color: #ffffff;
+}
+
+/* Academic interests */
+.features {
+  padding: 50px 0;
+  background: #ffffff;
+}
+
+.section-title {
+  margin: 0;
+  color: #17324d;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.section-lede {
+  max-width: 700px;
+  margin: 12px auto 30px;
+  color: #555555;
+  text-align: center;
+  font-size: 14px;
+}
+
+.features-grid {
+  display: flex;
+  align-items: stretch;
+  gap: 28px;
+}
+
+.feature {
+  flex: 1;
+  min-width: 0;
+  padding: 22px 18px;
+  text-align: center;
+  border: 1px solid #e2eaf0;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.feature h3 {
+  margin: 12px 0;
+  color: #17324d;
+  font-size: 18px;
+}
+
+.feature p {
+  margin-bottom: 0;
+  color: #555555;
+  font-size: 14px;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 14px;
+  border: 2px solid #9bc9e2;
+  border-radius: 50%;
+  background: #f3f9fc;
+  font-size: 24px;
+}
+
+/* Learning through experience */
+.featured {
+  padding: 48px 0;
+  background: #eef6fa;
+}
+
+.media {
+  overflow: hidden;
+  border: 1px solid #d5e0e8;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.media img {
+  display: block;
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-caption {
+  margin: 12px auto 0;
+  color: #666666;
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* Experience cards */
+.secondary {
+  padding: 48px 0;
+  background: #ffffff;
+}
+
+.secondary-grid {
+  display: flex;
+  align-items: stretch;
+  gap: 26px;
+  margin-top: 28px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #dce4eb;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.card-text {
+  padding: 22px;
+  min-width: 0;
+}
+
+.card-text h3 {
+  margin: 0 0 12px;
+  color: #17324d;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.card-text p {
+  margin: 0;
+  color: #555555;
+  font-size: 13px;
+}
+
+.card-text ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #555555;
+  font-size: 13px;
+}
+
+.card-text li {
+  margin-bottom: 8px;
+}
+
+.card-image {
+  min-height: 220px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Decorative images for the experience cards */
+.img-a {
+  background-image: url(
+    "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80"
+  );
+}
+
+.img-b {
+  background-image: url(
+    "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
+  );
+}
+
+/* Call-to-action section */
+.cta {
+  padding: 48px 0;
+  background: #eef6fa;
+}
+
+.cta-inner {
+  max-width: 760px;
+  text-align: center;
+}
+
+.cta-inner h2 {
+  margin: 0 0 12px;
+  color: #17324d;
+  font-size: 25px;
+}
+
+.cta-inner p {
+  margin: 0 0 24px;
+  color: #555555;
+  font-size: 14px;
+}
+
+/* Footer */
+.site-footer {
+  padding: 28px 0;
+  border-top: 1px solid #e5eaf0;
+  background: #f8fafc;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.footer-left {
+  max-width: 380px;
+  color: #666666;
+  font-size: 12px;
+}
+
+.footer-left strong {
+  color: #17324d;
+  font-size: 17px;
+}
+
+.footer-left p {
+  margin: 5px 0;
+}
+
+.footer-cols {
+  display: flex;
+  gap: 36px;
+}
+
+.footer-col h4 {
+  margin: 0 0 10px;
+  color: #17324d;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-col a {
+  display: block;
+  margin: 7px 0;
+  color: #555555;
+  font-size: 12px;
+}
+
+.footer-col a:hover {
+  color: #3a88a8;
+}
+
+/* Responsive styles for phones and small screens */
+@media (max-width: 750px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .site-nav {
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .hero {
+    min-height: 330px;
+  }
+
+  .hero-content {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .hero-subhead {
+    font-size: 17px;
+  }
+
+  .features-grid {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .feature {
+    padding: 22px;
+  }
+
+  .media img {
+    height: 260px;
+  }
+
+  .secondary-grid {
+    flex-direction: column;
+  }
+
+  .card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-image {
+    min-height: 200px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-cols {
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    font-size: 22px;
+  }
+
+  .site-nav {
+    gap: 10px 14px;
+  }
+
+  .site-nav a {
+    font-size: 11px;
+  }
+
+  .section-title {
+    font-size: 19px;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .card-image {
+    min-height: 180px;
+    order: -1;
+  }
+
+  .footer-cols {
+    gap: 22px;
+  }
+}
+
